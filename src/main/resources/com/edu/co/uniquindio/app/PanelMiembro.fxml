@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane prefHeight="542.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.edu.co.uniquindio.Controlador.ControladoresSecundarios.ControladorPanelMiembro">
+   <children>
+      <TabPane prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Sesiones Disponibles">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="218.0" prefWidth="602.0">
+                     <children>
+                        <TableView fx:id="tableView_SesionesDIsponibles" layoutX="14.0" layoutY="49.0" prefHeight="200.0" prefWidth="200.0">
+                          <columns>
+                            <TableColumn fx:id="gridPane_sesionesDisponibles" prefWidth="199.20001220703125" text="Sesiones disponibles" />
+                          </columns>
+                        </TableView>
+                        <Label layoutX="484.0" layoutY="14.0" prefHeight="18.0" prefWidth="102.0" text="Nombre" />
+                        <GridPane layoutX="267.0" layoutY="63.0" prefHeight="175.0" prefWidth="294.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="160.0" minWidth="10.0" prefWidth="126.4000244140625" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="133.5999755859375" minWidth="10.0" prefWidth="133.5999755859375" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label text="Entrenador" />
+                              <Label text="Estado" GridPane.rowIndex="1" />
+                              <Label text="Fecha" GridPane.rowIndex="2" />
+                              <Label fx:id="labelNombreEntrenador_SesionesDisponibles" text="Label" GridPane.columnIndex="1" />
+                              <Label fx:id="labelEstadoSesion_SesionesDisponibles" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Label text="Duracion" GridPane.rowIndex="3" />
+                              <Label fx:id="labelFecha_SesionesDisponibles" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <Label fx:id="labelDuracion_SesionesDisponibles" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                           </children>
+                        </GridPane>
+                        <Button fx:id="buttomMarcarCompletado_SesionesDisponibles" layoutX="142.0" layoutY="260.0" mnemonicParsing="false" onAction="#marcarCompletada" text="Completada" />
+                        <Button fx:id="buttomInformacion_SesionesDisponibles" layoutX="42.0" layoutY="260.0" mnemonicParsing="false" onAction="#mostrarInformacion" text="Informacion" />
+                        <GridPane layoutX="42.0" layoutY="309.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label text="Deporte" />
+                              <Label fx:id="labelEspecialidad_SesionesDisponibles" text="Label" GridPane.columnIndex="1" />
+                              <Label fx:id="labelDescripcionDeporte_sesionesDisponibles" text="Label" GridPane.columnIndex="2" />
+                              <Label fx:id="labelDificultas_SesionesDisponibles" text="Label" GridPane.columnIndex="3" />
+                           </children>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Solicitud">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <GridPane layoutX="113.0" layoutY="71.0" prefHeight="216.0" prefWidth="374.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label text="Descripcion" />
+                              <Label text="Deporte" GridPane.rowIndex="1" />
+                              <TextArea fx:id="textAreaDescripcion_Solicitud" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" />
+                              <ComboBox fx:id="comboBoxDeporte_Solicitud" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                           </children>
+                        </GridPane>
+                        <Button fx:id="buttomEnviarSolicitud" layoutX="274.0" layoutY="287.0" mnemonicParsing="false" onAction="#enviarSolicitud" text="Enviar" />
+                        <Label layoutX="204.0" layoutY="32.0" text="Escriba la descripcion de su solicitud" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Sesiones Completadas">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="218.0" prefWidth="602.0">
+                     <children>
+                        <TableView fx:id="tableView_SesionesCompletadas" layoutX="14.0" layoutY="49.0" prefHeight="200.0" prefWidth="200.0">
+                           <columns>
+                              <TableColumn fx:id="gridPane_sesisionesCompletadas" prefWidth="199.20001220703125" text="Sesiones Completadas" />
+                           </columns>
+                        </TableView>
+                        <Label layoutX="484.0" layoutY="14.0" prefHeight="18.0" prefWidth="102.0" text="Nombre" />
+                        <GridPane layoutX="267.0" layoutY="63.0" prefHeight="175.0" prefWidth="294.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="160.0" minWidth="10.0" prefWidth="126.4000244140625" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="133.5999755859375" minWidth="10.0" prefWidth="133.5999755859375" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label text="Entrenador" />
+                              <Label text="Estado" GridPane.rowIndex="1" />
+                              <Label text="Fecha" GridPane.rowIndex="2" />
+                              <Label fx:id="labelNombreEntrenadors_esisionesCompletadas" text="Label" GridPane.columnIndex="1" />
+                              <Label fx:id="labelEstadoSesion_sesisionesCompletadas" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Label text="Duracion" GridPane.rowIndex="3" />
+                              <Label fx:id="labelFecha_sesisionesCompletadas" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <Label fx:id="labelDuracion_sesisionesCompletadas" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                           </children>
+                        </GridPane>
+                        <GridPane layoutX="42.0" layoutY="309.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label text="Deporte" />
+                              <Label fx:id="labelEspecialidad_sesisionesCompletadas" text="Label" GridPane.columnIndex="1" />
+                              <Label fx:id="labelDescripcionDeporte_sesisionesCompletadas" text="Label" GridPane.columnIndex="2" />
+                              <Label fx:id="labelDificultas_sesisionesCompletadas" text="Label" GridPane.columnIndex="3" />
+                           </children>
+                        </GridPane>
+                        <Button fx:id="buttonInformacionComletadas" layoutX="74.0" layoutY="257.0" mnemonicParsing="false" onAction="#mostrarInformacion_SesionesCompletadas" text="Informacion" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Button layoutX="126.0" layoutY="421.0" mnemonicParsing="false" onAction="#retroceder" text="retroceder" />
+   </children>
+</AnchorPane>

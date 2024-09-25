@@ -1,0 +1,14 @@
+sept 24, 2024 8:21:33 P. M. com.edu.co.uniquindio.Utilidades.LoggerSistem guardarRegistroLog
+INFORMACIÓN: accion,A ingresado el administrador1,2024-09-24
+sept 24, 2024 8:21:43 P. M. com.edu.co.uniquindio.Utilidades.LoggerSistem guardarRegistroLog
+GRAVE: accion,Cannot invoke "javafx.scene.control.Button.setText(String)" because "this.buttonActualizar" is null,2024-09-24
+sept 24, 2024 8:21:59 P. M. com.edu.co.uniquindio.Utilidades.LoggerSistem guardarRegistroLog
+INFORMACIÓN: accion,Se ha eliminado una sesion,2024-09-24
+sept 24, 2024 8:23:33 P. M. com.edu.co.uniquindio.Utilidades.LoggerSistem guardarRegistroLog
+INFORMACIÓN: accion,El usuarioSa A completado la sesion12345678,2024-09-24
+sept 24, 2024 8:35:40 P. M. com.edu.co.uniquindio.Utilidades.LoggerSistem guardarRegistroLog
+INFORMACIÓN: accion,A ingresado el miembro894,2024-09-24
+sept 24, 2024 8:35:51 P. M. com.edu.co.uniquindio.Utilidades.LoggerSistem guardarRegistroLog
+INFORMACIÓN: accion,El usuarioSa A completado la sesion12345678,2024-09-24
+sept 24, 2024 8:36:27 P. M. com.edu.co.uniquindio.Utilidades.LoggerSistem guardarRegistroLog
+INFORMACIÓN: accion,A ingresado el miembro894,2024-09-24

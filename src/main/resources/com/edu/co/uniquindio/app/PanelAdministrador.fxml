@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="691.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.edu.co.uniquindio.Controlador.ControladoresSecundarios.ControladorPanelAdministrador">
+   <children>
+      <TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="625.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+         <tabs>
+            <Tab text="Solicitudes">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="462.0" prefWidth="600.0">
+                     <children>
+                        <TableView fx:id="tv_lista_solicitudes" layoutX="14.0" layoutY="43.0" prefHeight="200.0" prefWidth="200.0">
+                           <columns>
+                              <TableColumn fx:id="ctv_nombreSeccion" prefWidth="104.0" text="Nombre" />
+                              <TableColumn fx:id="ctv_especialidadSesion" prefWidth="95.20001220703125" text="Especialidad" />
+                           </columns>
+                        </TableView>
+                        <TextArea fx:id="tf_DescripcionSolicitud" editable="false" layoutX="14.0" layoutY="283.0" prefHeight="73.0" prefWidth="182.0" />
+                        <Label fx:id="labelDescripcionSolicitud" layoutX="59.0" layoutY="253.0" text="Descripcion solicitud" />
+                        <TableView fx:id="tv_sesionesSolicitudes" layoutX="263.0" layoutY="43.0" prefHeight="190.0" prefWidth="150.0">
+                           <columns>
+                              <TableColumn fx:id="ctv_id" prefWidth="149.60001220703126" text="Sesion" />
+                           </columns>
+                        </TableView>
+                        <GridPane layoutX="419.0" layoutY="44.0" prefHeight="190.0" prefWidth="158.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label fx:id="labelFechaSesion" text="Fecha" />
+                              <Label fx:id="labelFechaDuracion" text="Duracion" GridPane.rowIndex="2" />
+                              <Label fx:id="labelFechaEntrenador" text="Entrenador" GridPane.rowIndex="1" />
+                              <Label fx:id="labelEspecialidad" text="Especialidad" GridPane.rowIndex="3" />
+                              <Label fx:id="txt_fecha" GridPane.columnIndex="1" />
+                              <Label fx:id="txt_entrenador" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Label fx:id="txt_duracion" prefHeight="18.0" prefWidth="32.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <Label fx:id="txt_especialidad" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                           </children>
+                        </GridPane>
+                        <Button fx:id="buttonAsignar" layoutX="300.0" layoutY="307.0" mnemonicParsing="false" onAction="#asignar_sesion_miembro" text="Asignar" />
+
+                        <ComboBox fx:id="comoboBoxLenguajes" layoutX="114.0" layoutY="471.0" prefWidth="150.0" promptText="Lenguaje" />
+                        <Button fx:id="modificarLenguaje" layoutX="24.0" layoutY="471.0" mnemonicParsing="false" onAction="#modificadorLenguaje" text="Modificar" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="crear sesiones">
+               <content>
+                  <AnchorPane fx:id="crear_sesion" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <GridPane layoutX="31.0" layoutY="26.0" prefHeight="171.0" prefWidth="287.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="121.79998779296875" minWidth="10.0" prefWidth="74.5999755859375" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="188.20001220703125" minWidth="10.0" prefWidth="183.4000244140625" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label fx:id="labelFecha" text="Fecha" />
+                              <Label fx:id="labelDescripcion" text="Descripcion" GridPane.rowIndex="1" />
+                              <Label fx:id="labelEspecialidades" text="Especialidades" GridPane.rowIndex="3" />
+                              <Label fx:id="labelDuracion" text="Duracion" GridPane.rowIndex="2" />
+                              <TextArea fx:id="tf_Descripcion" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <TextField fx:id="tf_duracion" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <ComboBox fx:id="cb_Especialidades" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <DatePicker fx:id="dp_fecha" GridPane.columnIndex="1" />
+                              <Label fx:id="labelDificultad" text="Dificultad" GridPane.rowIndex="4" />
+                              <ComboBox fx:id="cB_DificultadSesiones" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                           </children>
+                        </GridPane>
+                        <TableView fx:id="tv_lista_entreadores" layoutX="356.0" layoutY="14.0" prefHeight="200.0" prefWidth="200.0">
+                           <columns>
+                              <TableColumn fx:id="ctv_nombre_entrenador" prefWidth="99.20001220703125" text="Entrenador" />
+                              <TableColumn fx:id="ctv_especialidad_entredor" prefWidth="100.0" text="Especialidad" />
+                           </columns>
+                        </TableView>
+                        <Button fx:id="buttonCrear" layoutX="92.0" layoutY="298.0" mnemonicParsing="false" onAction="#crear_sesion" text="Crear" />
+                        <TableView fx:id="tv_sesiones_creadas" layoutX="75.0" layoutY="347.0" prefHeight="200.0" prefWidth="419.0">
+                           <columns>
+                              <TableColumn fx:id="ctv_fecha_sesiones" prefWidth="75.0" text="Fecha" />
+                              <TableColumn fx:id="ctv_descripcion_sesiones" prefWidth="75.0" text="Descripcion" />
+                              <TableColumn fx:id="ctv_duracion_sesion" prefWidth="75.0" text="Duracion" />
+                              <TableColumn fx:id="ctv_especialidad_sesion" prefWidth="115.99993896484375" text="especialidad" />
+                              <TableColumn fx:id="ctv_entrenador_sesion" prefWidth="77.60003662109375" text="entrenador" />
+                           </columns>
+                        </TableView>
+                        <Button fx:id="buttonEliminar" layoutX="145.0" layoutY="297.0" mnemonicParsing="false" onAction="#eliminar_sesiones" text="eliminar" />
+                        <Button layoutX="218.0" layoutY="298.0" mnemonicParsing="false" onAction="#actualizar_sesiones" text="actualizar" />
+                        <Button layoutX="300.0" layoutY="297.0" mnemonicParsing="false" onAction="#limpiarCampos" prefHeight="26.0" prefWidth="97.0" text="limpiar campos" />
+                        <Button fx:id="bt_VerInformacion" layoutX="430.0" layoutY="298.0" mnemonicParsing="false" onAction="#verInformacion" text="Informacion" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+      <Button fx:id="buttonAtras" layoutX="30.0" layoutY="645.0" mnemonicParsing="false" onAction="#volver_menu" text="atras" />
+   </children>
+</Pane>
